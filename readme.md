@@ -27,4 +27,5 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git checkout main/master
 - git revert <id> -> undo changes in that commit  -> reverted by adding new commit
 - git reset --hard <id> -> undo the changes by deleting all commits since id -> must be taken care can't be reset -> re writing the history
-
+- .gitignore file -> ignores the file we don't want to push up in the repo
+- 
