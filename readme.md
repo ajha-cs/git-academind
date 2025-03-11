@@ -1,17 +1,17 @@
-Github Actions -> 
+## Github Actions -> 
 Workflow auto service by github -> repo erlated processees
 
 
-1.CI/CD - integration and deployement -> for automating app dev and dep
+# 1.CI/CD - integration and deployement -> for automating app dev and dep
 CI -> integrating new code or changes auto.
 CD -> publishing the new veresion once code is tested auto.
-2.Code and Repository mgmt. -> Github
+# 2.Code and Repository mgmt. -> Github
 
 Git - tool standalone - free veresion control system- managege source code changes -> save code snapshots (commit) -> branches (alt. code veresions) -> switch between branches and commits - checkout
 
 Github - company -> cloud git repo and serivices maanaging in the cloud -> cloud git repo storage (push and pull) - code mgmt and collabaration (issues, projects, pull requests and more) - automation and CI/CD via Github Actions
 
-Git / Github -> 
+# Git / Github -> 
 
 Git Repo -> must be created in order to see git in actions -> track all changes (contains all metadata to jump back)
 
