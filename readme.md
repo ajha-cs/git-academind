@@ -28,4 +28,11 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git revert <id> -> undo changes in that commit  -> reverted by adding new commit
 - git reset --hard <id> -> undo the changes by deleting all commits since id -> must be taken care can't be reset -> re writing the history
 - .gitignore file -> ignores the file we don't want to push up in the repo
+- git branches -> important concept -> related to commits -> commits are organized in branches -> we have by default the **master branch** -> beranches are containers that contains commit -> to work on new feature creaate branch w/o hinder the main work and merge them once the feature is complete ->
+- git branch <name> -> by default take latest commit targeted by head and builds new branch with this commit as starting point 
+- git merge <name> -> to merge branches -> need to resolve the conflicts
+- git branch -> list all branches
+- git checkout <branchname> -> to work in given branchname
+- git branch -D <branchname> -> deletes the branchname
+- git checkout -b <bname> -> creates and chheckout
 - 
