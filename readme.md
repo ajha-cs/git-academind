@@ -35,4 +35,11 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git checkout <branchname> -> to work in given branchname
 - git branch -D <branchname> -> deletes the branchname
 - git checkout -b <bname> -> creates and chheckout
-- 
+- git merge <bname> -> add latest commit in bname -> git resolve such basic conflicts -> brand new commit
+- git locally on our computer -> so maybe it get lost if computer crashes -> data may get lost -> collab is difficult -> copy the code -> that's why github
+- github (used for backup and cross-device collab purposes) -> compny gives services related to git -> and store the git repo in cloud called as github repository **gitlab** -> public/ private -> for viewing purposes
+- git remote add <localreponame-id for local // origin> <url> -> adds a remote repo to local
+- git push orign main -> for uploading commits 
+- git remote set-url origin https://okay-cs@github.com/okay-cs/git-academind.git -> use of **Personal Access Token**
+- git push --set-upstream origin master
+- git pull -> for downloading commits
