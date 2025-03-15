@@ -106,3 +106,4 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git show -> show the content / object in git
 - git tag -a <ver> -m "Latest Version"
 - git tag -d 2.0
+- git push -u origin feature-upstream -> u - means upstreams
