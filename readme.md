@@ -58,4 +58,5 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - 2. Understanding Forks -> we don't trust anyone reaching out to us -> no collaborators
 - In such a case **fork** a repo -> cloning a repo on github -> that repo is mine -> then create a pull request once changed
 - **compare across forks options** -> to see changes
-- 
+- Resolving conflicts
+- git stash -> suppose working on new feature in master branch -> go back to latest commit ?? - we don't want to create new commit -> stash - internal memory where we can save uncommitted unstaged changes
