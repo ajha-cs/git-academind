@@ -61,6 +61,7 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - Resolving conflicts
 - git stash -> suppose working on new feature in master branch -> go back to latest commit ?? - we don't want to create new commit -> stash - internal memory where we can save uncommitted unstaged changes
 - git stash -> to save uncommited unstaged changes
-- git stash apply -> apply the latest data
+- git stash apply -> apply the latest data - stages
 - git stash list -> list different stages
-
+- Once you git stash / access the stash data -> either commit the changes or undo changes -> commit -> change smthng -> stash or stast again -> then git stash apply 
+- Add msg to stash 
