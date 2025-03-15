@@ -48,5 +48,14 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git clone <url> <repo-name> -> clone the remote repo on our local machine
 - git remote -> gives the remote repos
 - git remote get-url origin -> give the url of the repo 
+- git remote set-url origin urlhere
 - Making changes as different user -> 
-
+- git push origin feat-color -> error (we don't have permission) ->  How to make our local changes appears on the repo we don't create nor we own ?? 
+- -> Github Issues and Collaboration ->
+- 1. Reach out to the creator -> by creating issues (not a good method) -> in issues section using ''' wrappers -> add a stranger as collaborators
+- Also Branch Protection Rules to protect our main branch -> require pull request before merging
+- Pull request -> a request to owners or colleagues to pull our changes in main branch -> whoever had a write access can revview this changes
+- 2. Understanding Forks -> we don't trust anyone reaching out to us -> no collaborators
+- In such a case **fork** a repo -> cloning a repo on github -> that repo is mine -> then create a pull request once changed
+- **compare across forks options** -> to see changes
+- 
