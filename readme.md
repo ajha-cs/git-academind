@@ -70,4 +70,7 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git stash drop 0 -> remove the stage 0
 - git stash clear -> remove all stages
 - Can we bring back the deleted commits/snapshots ?? 
-- git restore
+- git reflog -> shows all commmits for last 30 days also helps if we deleted branches tho
+- git reset --hard HEAD~1 -> remove the commit 1 behind HEAD
+- git reset --hard commit_id/ from git reflog -> to add back the commit
+- 
