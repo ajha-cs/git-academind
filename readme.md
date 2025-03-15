@@ -65,3 +65,9 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git stash list -> list different stages
 - Once you git stash / access the stash data -> either commit the changes or undo changes -> commit -> change smthng -> stash or stast again -> then git stash apply 
 - Add msg to stash 
+- git stash push -m "msg" -> add msg to the stash
+- git stash pop 0 -> apply the stage - 0 and remove from stash 
+- git stash drop 0 -> remove the stage 0
+- git stash clear -> remove all stages
+- Can we bring back the deleted commits/snapshots ?? 
+- git restore
