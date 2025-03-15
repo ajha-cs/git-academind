@@ -107,3 +107,7 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git tag -a <ver> -m "Latest Version"
 - git tag -d 2.0
 - git push -u origin feature-upstream -> u - means upstreams
+- git branch -a ?? remote tracking branch (RTB) -> local read only copy of RB
+- LB - RTB - RB
+## ALWAYS RTB gets updated first before making changes
+- git pull origin master -> git fetch (update RTB from RMB) + git merge (merge RTB chanegs to LMB)
