@@ -124,3 +124,4 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git branch -vv -> shows more information about the branch
 - git remote -> show current remote servers
 - git remote show origin -> more information about current env we working on
+- git push -u origin feature-upstream -> now this branch is LTB for tracking remote branch (feature-upstream)
