@@ -107,7 +107,20 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git tag -a <ver> -m "Latest Version"
 - git tag -d 2.0
 - git push -u origin feature-upstream -> u - means upstreams
-- git branch -a ?? remote tracking branch (RTB) -> local read only copy of RB
+- git branch -a ?? remote tracking branch (RTB) -> local **read only** copy of RB
+- git branch -r -> show remote tracking branches
+- git ls-remote -> makes n/w connection and get the details of remote branch
 - LB - RTB - RB
+- [LTB - RTB] - RB
 ## ALWAYS RTB gets updated first before making changes
 - git pull origin master -> git fetch (update RTB from RMB) + git merge (merge RTB chanegs to LMB)
+- git fetch origin -> (RMB changes to RTB - red one)
+- To get this RTB updates -> we could checkout RTB and then create a new branch to have these changes
+# Efficient Way
+- LTB (Local Tracking Branch) ?? -> Local refernce to RTB - can be edited (git push, git pull available)
+- Creating LTB 
+- git branch --track <LTB_name -  same name as RB> origin/feature-remote ->  add a LTB to track changes of RB -> feature-remote
+[LTB -> git push -> RTB]
+- git branch -vv -> shows more information about the branch
+- git remote -> show current remote servers
+- git remote show origin -> more information about current env we working on
