@@ -78,4 +78,31 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - To get deleted branch back -> 
 - git checkout reflogid
 - git switch -c abc
-    
+- Combining master and feature branches ->     
+- Merge types -> 
+1. fast-fwd merge ->  if we have no additional commits in master only commits in feature branch -> merge moves HEAD fwd to f2 commit and doesn't create new commit -> no new merge commit -> 
+- git merge --squash <bname> -> put all commit together in the end 
+2. non fast fwd merge (recursive/octopus/ours/subtree) -> **recursive merge** -> 
+- git merge --no-ff <bname> -> no ff merge -> creates a new merged commit 
+- recursive merge -> if we have commits in both feature and master branch after feature branch cerated -> and additional merge commit created in master branch
+- git rebase -> Rebase Alternative -> we can add f1,f2 to the updated master branch after m3 -> result in ffm -> rebase means rebase the master in feature branch -> changes in feature branch based on m3 -> f1 -> f2
+1. rebase master to feature branch
+2. mereg rebased feature into master
+rebase -> make new commits not move them their hashtags will be different -> may creates havoc history
+## REBASE - DEPENDS ON PROJECTS -> CAREFUL WHEN COMMITS O/S OF YOUR REPOSITORY
+- git rebase <bname> -> when to apply -> new commits while working in feature branch -> feature relies on additional commits in master branch -> rebase massater into feature branch **OR** feature is finished and implementation **without the merge commit**
+## REBASING REWRITES THE HISTORY
+## What if we have conflicts during the merge ?? -> 
+- once conflict -> working on two file aat a same time
+- git status -> give more information about the conflict 
+- git log --merge -> show commits we wanna merge
+- git diff -> shows differences 
+- Merge (noff create merge commit -> new commit) vs Rebase (change single commit's parent -> new commit ids) vs Cherry-Pick (Add specific commit to branch (HEAD) - copies commit with new id)
+- git cheery-pick <id> -> merging only the particular specific commits -> but duplicate commits
+- git tags -> to tag important milestones/ important stages -> lightweight tags (pointer to the commits in the branch) vs annonated tags (full object in git who added this tag - email)
+- git tag tag_name <id>
+- git tag -d 1.0 -> remove lw tag
+- git checkout tag_name
+- git show -> show the content / object in git
+- git tag -a <ver> -m "Latest Version"
+- git tag -d 2.0
