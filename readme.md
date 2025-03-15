@@ -125,3 +125,8 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git remote -> show current remote servers
 - git remote show origin -> more information about current env we working on
 - git push -u origin feature-upstream -> now this branch is LTB for tracking remote branch (feature-upstream)
+- Can we delete RTB -> 
+- git branch --delete --remote origin/feature
+- Can we delete RB -> On deletion of RB its RTB also deleted
+- git push origin --delete feature
+- git push --force origin master
