@@ -60,3 +60,7 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - **compare across forks options** -> to see changes
 - Resolving conflicts
 - git stash -> suppose working on new feature in master branch -> go back to latest commit ?? - we don't want to create new commit -> stash - internal memory where we can save uncommitted unstaged changes
+- git stash -> to save uncommited unstaged changes
+- git stash apply -> apply the latest data
+- git stash list -> list different stages
+
