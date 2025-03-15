@@ -97,7 +97,7 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git status -> give more information about the conflict 
 - git log --merge -> show commits we wanna merge
 - git diff -> shows differences 
-- Merge (noff create merge commit -> new commit) vs Rebase (change single commit's parent -> new commit ids) vs Cherry-Pick (Add specific commit to branch (HEAD) - copies commit with new id)
+- Merge (**noff create merge commit -> new commit** or **ff - just moving head no new commit**) vs Rebase (change single commit's parent -> new commit ids) vs Cherry-Pick (Add specific commit to branch (HEAD) - copies commit with new id)
 - git cheery-pick <id> -> merging only the particular specific commits -> but duplicate commits
 - git tags -> to tag important milestones/ important stages -> lightweight tags (pointer to the commits in the branch) vs annonated tags (full object in git who added this tag - email)
 - git tag tag_name <id>
