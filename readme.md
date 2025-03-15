@@ -130,3 +130,6 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - Can we delete RB -> On deletion of RB its RTB also deleted
 - git push origin --delete feature
 - git push --force origin master
+
+## GTHUB ACTIONS
+
