@@ -42,5 +42,11 @@ Git Repo -> must be created in order to see git in actions -> track all changes 
 - git push orign main -> for uploading commits 
 - git remote set-url origin https://okay-cs@github.com/okay-cs/git-academind.git -> use of **Personal Access Token**
 - git push --set-upstream origin master
-- git pull -> for downloading commits
+- git pull -> for downloading commits from remote repo
 - pull request ?? -> 
+- wiki - uses in open src dev
+- git clone <url> <repo-name> -> clone the remote repo on our local machine
+- git remote -> gives the remote repos
+- git remote get-url origin -> give the url of the repo 
+- Making changes as different user -> 
+
