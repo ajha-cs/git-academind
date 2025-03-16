@@ -195,8 +195,23 @@ rebase -> make new commits not move them their hashtags will be different -> may
 # Job Outputs -> simple values that can be used in another jobs
 - Add new key at top of jobs definition before **steps**
 - **outputs**: 
-- **script-file**: ${{ steps.publlish.outputs.smthng }} key -> 2 ways
+- **script-file**: ${{ steps.publlish.outputs.smthng }} key
+- jobs can pick up and share outputs via **steps** context -> 
+2 ways
+- "script-file" -> name of output used across the jobs
+- "smthng" -> name of output used within the job
 - 'smthng={}' >> $GITHUB_OUTPUT 
 - '::set-output name=smthng::{}' 
 - >> $GITHUB_OUTPUT -> target special file created by github in the env where job runs where output key-value pair written to
-- To access in another jobs -> use **needs** object
+- To access in another jobs -> use **needs** context
+- echo "${{ needs.build.outputs.**script-file** }}"
+
+# Dependency Caching -> wf takes some time - like 3 min -> but some time get a code is repetitive task - but it is fast
+- but installing a deps is longest -> if we could able to store it website deploys faster
+- **must be before the target**
+- **also rerun once the job is finished**
+- must give cache a key - for retrieving a cache in future or also indicates whether the cache should be discarded when deps changed -> make it dynamic -> **hashFiles()**
+- **/package-lock.json means - more / infront is allowed -> ./folder/folder/package-lock.json
+- **central caching** is used
+
+## 
