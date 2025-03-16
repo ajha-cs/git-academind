@@ -133,3 +133,43 @@ rebase -> make new commits not move them their hashtags will be different -> may
 
 ## GTHUB ACTIONS
 
+- Repos -> Workflows -> Jobs -> Steps
+- Repo could have as many workflows
+- Workflows -  contains one or more jobs Trigerred upon **events**
+- Jobs - contains one or more steps -> define a runner (execution environment) -> Jobs can run **parallel** or **sequential** -> can be **conditional**
+- Steps -> execute **shell script** or **actions** -> executed **inorder** -> ans also **conditionally**
+- yml file -> .github/workflows
+- events -> 
+- **on**: workflow_dispatch -> manually trigger wf
+- **jobs**:
+- job_name (build): needs a env.
+- **runs-on**: environment where steps gonna run
+- **steps**: 
+- - **name**: name of the step
+- **run** -> run shell command
+- Workflow Triggers (events) ->
+- Repo Related -> 
+- push -> branches: main, abc 
+- pull_request -> types: [opened, closed], create, fork, issues, issue_comment, watch, discussion and many more
+- other -> 
+- repository_dispatch -> REST API request trigger wf
+- schedule 
+- workflow_call
+- Workflow don;'t run in our repo -> it runs on server
+- Actions -> custom or third party app that performs common and repeated tasks
+- "run" -> to run shell command
+- Marketplace for the GHA
+- To use **actions** -> 
+- actions/checkout -> 
+- **uses**: actions/checkout@v3
+- **with**: take keys that configure the action -> key-value pair
+- To run jobs one after another -> 
+- **needs**: job_name
+- Using Multiple Triggers (events) ->
+- **on**: [push, workflow_dispatch]
+- Expressions and Github Contexts -> we might needs some metadata -> collection of metadata are called **contexts** -> 
+- To use contexts -> "${{ toJSON(github) }}" -> gives information about repo or keys or other information
+- ${{ <context> }}
+
+## Events
+
