@@ -236,4 +236,5 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - github knows these are secrets won't log them out
 
 ## Utilising Environment Secrets ->
-- github Env. -> attached to repo -> wf can reference these env. -> extra config/secret for jobs in that env -> special protection rules
+- github Env. -> attached to repo -> wf can reference these env. -> extra config/secret for jobs in that env -> special protection rules -> diffrent secret for different jobs -> eennv. specific secrets
+- **environment** key is used to make it job specific
