@@ -215,4 +215,25 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - **/package-lock.json means - more / infront is allowed -> ./folder/folder/package-lock.json
 - **central caching** is used
 
-## 
+## Environment Variables & Secrets ->
+- Certain variable that are dynamic -> foreg: pwd might changes as per env (testing/production)
+- so how to provide these env variables
+- **env**: use of env keyword 
+- can be set on workflow lvl and can be accessed by each jobs in wf until and unless not overwrite by other jobs
+- can be set on job lvl
+- Now these env variable can be used across the code files
+- **some env variable can also used in wf file** -> 
+- run: **$PORT** might depends on shell
+- or we could use expression syntax -> use env context - contains environment variable steps-specific or job-specific it depends
+- ${{ env.MONGODB_USERNAME }}
+
+## Understanding and using Secrets -> 
+- Don't wanna put credentials to the workflow file
+- **Secrets** -> gha allow you to store secrets -> using github 
+- Can be stored at organisation lvl (organ. acc.)
+- Can be stored on repo lvl (repo settings -> secrets -> action specific -> value available to all wf executed for this repo) -> can't be viewed only updated
+- can be accessed using **secrets** context object
+- github knows these are secrets won't log them out
+
+## Utilising Environment Secrets ->
+- github Env. -> attached to repo -> wf can reference these env. -> extra config/secret for jobs in that env -> special protection rules
