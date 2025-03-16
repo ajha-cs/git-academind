@@ -173,3 +173,13 @@ rebase -> make new commits not move them their hashtags will be different -> may
 
 ## Events
 
+- Filtered Events ??
+- Available events -> **workflow_call**, **repository_dispatch**, **schedule**
+- On deploy acition if code pushed to master branch -> 
+- **Activity Types** -> more control on events - which variation will triggered the wf -> for eg: pull_request -> based on issues is closed or opened or labeled or edited -> default - opened, synchronised, reopened
+- **Filters** -> for eg: push -> based on target branches, tags, branches-ignore, tags-ignore, paths, paths-ignore
+- ## By default, pr based on forks do not trigger a wf -> bcoz anyone can fork the repo -> might spam your wf
+
+- Cancelling (get cancelled if job fails (can be changed) or stesp failed (can be changed) or can be cancelled manually) & Skipping WF (skip a wf run - push can trigger a wf but we could add exceptions for pull_request and push - on adding msg in commit like **[skip ci] [ci skip] [skip actions] [actions skip]**)
+
+
