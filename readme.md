@@ -202,11 +202,12 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - "smthng" -> name of output used within the job
 - 'smthng={}' >> $GITHUB_OUTPUT 
 - '::set-output name=smthng::{}' 
-- >> $GITHUB_OUTPUT -> target special file created by github in the env where job runs where output key-value pair written to
+- '>> $GITHUB_OUTPUT' -> target special file created by github in the env where job runs where output key-value pair written to
 - To access in another jobs -> use **needs** context
 - echo "${{ needs.build.outputs.**script-file** }}"
 
-# Dependency Caching -> wf takes some time - like 3 min -> but some time get a code is repetitive task - but it is fast
+# Dependency Caching -> 
+- wf takes some time - like 3 min -> but some time get a code is repetitive task - but it is fast
 - but installing a deps is longest -> if we could able to store it website deploys faster
 - **must be before the target**
 - **also rerun once the job is finished**
