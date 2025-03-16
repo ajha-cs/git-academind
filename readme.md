@@ -180,6 +180,23 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - **Filters** -> for eg: push -> based on target branches, tags, branches-ignore, tags-ignore, paths, paths-ignore
 - ## By default, pr based on forks do not trigger a wf -> bcoz anyone can fork the repo -> might spam your wf
 
-- Cancelling (get cancelled if job fails (can be changed) or stesp failed (can be changed) or can be cancelled manually) & Skipping WF (skip a wf run - push can trigger a wf but we could add exceptions for pull_request and push - on adding msg in commit like **[skip ci] [ci skip] [skip actions] [actions skip]**)
+- Cancelling (get cancelled if job fails (can be changed) or stesp failed (can be changed) or can be cancelled manually) & Skipping WF (skip a wf run - push can trigger a wf but we could add exceptions for pull_request and push - on adding msg in commit like -> 
+- **[skip ci] [ci skip] [skip actions] [actions skip]**)
 
+## Job Data & Outputs - Artifacts
 
+# Job Artifacts -> like logs, binary files we wanna share or analyze
+- Job (build app) -> produces op assets (app binary websites files) -> so user can download manually (via UI or API) or use them in other jobs (via actions)
+
+# Downloading artifacts automatically -> 
+- Since jobs running on different machines so won't accessibledirectly must be **downloaded**
+- downloads the artifacts and **unzips** them
+
+# Job Outputs -> simple values that can be used in another jobs
+- Add new key at top of jobs definition before **steps**
+- **outputs**: 
+- **script-file**: ${{ steps.publlish.outputs.smthng }} key -> 2 ways
+- 'smthng={}' >> $GITHUB_OUTPUT 
+- '::set-output name=smthng::{}' 
+- >> $GITHUB_OUTPUT -> target special file created by github in the env where job runs where output key-value pair written to
+- To access in another jobs -> use **needs** object
