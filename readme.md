@@ -215,7 +215,7 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - **/package-lock.json means - more / infront is allowed -> ./folder/folder/package-lock.json
 - **central caching** is used
 
-## Environment Variables & Secrets ->
+## Environment Variables & Secrets
 - Certain variable that are dynamic -> foreg: pwd might changes as per env (testing/production)
 - so how to provide these env variables
 - **env**: use of env keyword 
@@ -227,7 +227,7 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - or we could use expression syntax -> use env context - contains environment variable steps-specific or job-specific it depends
 - ${{ env.MONGODB_USERNAME }}
 
-## Understanding and using Secrets -> 
+## Understanding and using Secrets
 - Don't wanna put credentials to the workflow file
 - **Secrets** -> gha allow you to store secrets -> using github 
 - Can be stored at organisation lvl (organ. acc.)
@@ -238,3 +238,14 @@ rebase -> make new commits not move them their hashtags will be different -> may
 ## Utilising Environment Secrets ->
 - github Env. -> attached to repo -> wf can reference these env. -> extra config/secret for jobs in that env -> special protection rules -> diffrent secret for different jobs -> eennv. specific secrets
 - **environment** key is used to make it job specific
+
+## Controlling Execution Flow
+
+- Running jobs and steps conditionally, using mtx, reusabillity
+- **if** (jobs/steps): ${{dynamic_expression}} -> steps.<id>.conclusion or steps.<id>.outcome == 'failure' -> to change the deafult behavivor add failure()
+- **continue-on-error** (steps)
+- failure() -> returns true if prev steps or jobs failed
+- success() -> returns true if no prev steps failed
+- always() -> causes steps to execute even when cancelled
+- cancelled() -> returns true if wf is cancelled
+
