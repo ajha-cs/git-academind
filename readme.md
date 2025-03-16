@@ -242,10 +242,46 @@ rebase -> make new commits not move them their hashtags will be different -> may
 ## Controlling Execution Flow
 
 - Running jobs and steps conditionally, using mtx, reusabillity
-- **if** (jobs/steps): ${{dynamic_expression}} -> steps.<id>.conclusion or steps.<id>.outcome == 'failure' -> to change the deafult behavivor add failure()
-- **continue-on-error** (steps)
+- **if** (jobs/steps): ${{dynamic_expression}} -> 
+- steps.<id>.conclusion -> after **continue-on-error** evaluated or 
+- steps.<id>.outcome -> before **continue-on-error** evaluated == 'failure' -> to change the deafult behavivor add failure()
+- **continue-on-error** (steps) -> true or false
 - failure() -> returns true if prev steps or jobs failed
 - success() -> returns true if no prev steps failed
 - always() -> causes steps to execute even when cancelled
 - cancelled() -> returns true if wf is cancelled
+
+## Matrix Jobs
+
+- running the same job with different config at the same time
+- Runs in parallel by default
+- **strategy**: 
+-   **matrix**: 
+-       node-version: [12,14,16]
+- **include** key -> to have standalone config ->  add a list with dashes -> node-version: 18, operating-system: ubuntu-latest
+- **exclude** key -> to exclude value -> node-version: 12, operating-system: windows-latest
+
+## Reusable Workflows
+
+- **on**: workflow_call -> wf whose gonna used this can apply -> 
+- **uses**: full_path
+
+# Adding inputs to reusable wf ->
+- **inputs**:
+-   **input_name//anything**:
+-       **description, required, default, type keys**
+- using inputs context -> ${{ inputs.input_name }}
+- can be used **with** then **input_name**
+
+# Also secrets
+- **secrets**:
+-   **secret_name**:
+-       **description, required, default, type keys**
+- can be used **secrets** then ${{ secrets.some-secret }}
+
+# Also Outputs
+- **outputs**:
+-    **output_name**:
+-       **description**:
+-       **value**: ${{ jobs.deploy.outputs.outcome }}
 
