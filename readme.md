@@ -131,7 +131,7 @@ rebase -> make new commits not move them their hashtags will be different -> may
 - git push origin --delete feature
 - git push --force origin master
 
-## GTHUB ACTIONS
+## GITHUB ACTIONS
 
 - Repos -> Workflows -> Jobs -> Steps
 - Repo could have as many workflows
